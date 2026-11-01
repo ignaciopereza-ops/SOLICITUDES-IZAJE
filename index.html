@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#173b32">
-  <meta name="description" content="Aplicación de solicitudes de elementos de izaje">
+  <meta name="description" content="Solicitudes de elementos de izaje">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Solicitudes Izaje">
   <title>Solicitudes de Izaje</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icon-192.png">
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon.svg">
+
   <style>
     * { box-sizing: border-box; }
 
@@ -33,17 +38,10 @@
       box-shadow: 0 8px 30px #00000012;
     }
 
-    .logo {
-      width: 82px;
-      height: 82px;
-      margin: 0 auto 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 22px;
-      background: #173b32;
-      color: white;
-      font-size: 42px;
+    img {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 18px;
     }
 
     h1 { font-size: 25px; margin: 0 0 8px; }
@@ -71,7 +69,7 @@
 
 <body>
   <main>
-    <div class="logo">⚒</div>
+    <img src="./icon.svg" alt="Logo Solicitudes de Izaje">
 
     <h1>Solicitudes de Izaje</h1>
     <p class="subtitulo">Bodega de Izaje · Minera El Abra</p>
@@ -85,5 +83,14 @@
       El envío no garantiza disponibilidad ni autoriza el uso de los elementos.
     </p>
   </main>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+          .catch(error => console.error("Error al registrar:", error));
+      });
+    }
+  </script>
 </body>
 </html>
