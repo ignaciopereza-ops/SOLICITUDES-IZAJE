@@ -1,11 +1,28 @@
+
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="100" fill="#173b32"/>
-  <g fill="none" stroke="#ffffff" stroke-width="25" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M256 75v65"/>
-    <path d="M215 140h82l-12 65h-58z"/>
-    <path d="M256 205v35"/>
-    <path d="M256 240c-48 0-48 65 0 65s48 65 0 65"/>
-    <path d="M130 390h252"/>
-    <path d="M155 390l45-55h112l45 55"/>
+  <rect width="512" height="512" rx="112" fill="#173b32"/>
+
+  <g fill="none" stroke="#ffffff" stroke-width="24"
+     stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Estructura superior -->
+    <path d="M105 135h302"/>
+    <path d="M150 135l-30 65"/>
+    <path d="M362 135l30 65"/>
+    <path d="M120 200h272"/>
+
+    <!-- Punto de izaje -->
+    <path d="M256 135v85"/>
+    <circle cx="256" cy="244" r="25"/>
+
+    <!-- Gancho -->
+    <path d="M256 269v45"/>
+    <path d="M256 314c0 48 76 48 76 0"/>
+
+    <!-- Base de apoyo -->
+    <path d="M110 390h292"/>
+    <path d="M155 390l38-55h126l38 55"/>
   </g>
+
+  <circle cx="256" cy="244" r="7" fill="#ffffff"/>
 </svg>
